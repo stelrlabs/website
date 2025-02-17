@@ -43,9 +43,16 @@
     </nav>
 
     <!-- Hero Section -->
+      <!-- class="relative h-screen flex items-center justify-center text-center"
+      style="background: url('your-workout-image.jpg') center/cover no-repeat;" -->
     <section
-      class="relative h-screen flex items-center justify-center text-center"
-      style="background: url('your-workout-image.jpg') center/cover no-repeat;"
+      class="relative h-screen flex items-center justify-center text-center bg-fixed bg-center bg-cover"
+      style="
+        background-image: linear-gradient(
+          rgba(0, 0, 0, 0.8),
+          rgba(0, 0, 0, 0.8)
+        ), url('login_background.png');
+      "
     >
       <div class="absolute inset-0 bg-black opacity-50"></div>
       <div class="relative z-10 max-w-xl px-4">
