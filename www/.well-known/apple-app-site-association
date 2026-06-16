@@ -5,8 +5,8 @@
         "appIDs": ["J5347G3J7V.com.stelrlabs.Orion"],
         "components": [
           {
-            "/": "/orion/join*",
-            "comment": "Orion accountability group invite (code carried in ?code= query string)"
+            "/": "/orion-app/*",
+            "comment": "all Orion iOS app deeplinks"
           }
         ]
       }
