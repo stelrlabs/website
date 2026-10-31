@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page not found — Orion</title>
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="icon" href="/icon-192.png" type="image/png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; -webkit-font-smoothing: antialiased; }
+      :root {
+        --accent-blue: #007AFF;
+        --text-primary: #f5f5f7;
+        --text-secondary: #86868b;
+        --bg-dark: #000000;
+      }
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", system-ui, sans-serif;
+        background: var(--bg-dark);
+        color: var(--text-primary);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2em 1.5em;
+      }
+      .card { max-width: 420px; width: 100%; text-align: center; }
+      .logo { width: 72px; height: 72px; border-radius: 16px; margin-bottom: 1.5em; }
+      h1 { font-size: 1.9rem; font-weight: 600; margin-bottom: 0.6em; }
+      p { color: var(--text-secondary); line-height: 1.55; margin-bottom: 1.5em; font-size: 1.05rem; }
+      .btn {
+        display: inline-block;
+        padding: 0.85em 1.8em;
+        background: var(--accent-blue);
+        color: white;
+        text-decoration: none;
+        border-radius: 12px;
+        font-weight: 500;
+        font-size: 1rem;
+      }
+      .btn:hover { opacity: 0.9; }
+      .home { display: block; margin-top: 1.2em; color: var(--accent-blue); text-decoration: none; }
+      .home:hover { text-decoration: underline; }
+    </style>
+  </head>
+  <body>
+    <main class="card">
+      <img class="logo" src="/logo.png" alt="Orion" width="72" height="72" />
+      <h1>Page not found</h1>
+      <p>This page doesn't exist or has moved.</p>
+      <a class="btn" href="https://apps.apple.com/app/id6499177019?ct=web-404">Get Orion</a>
+      <a class="home" href="/">Go to the Orion homepage</a>
+    </main>
+  </body>
+</html>

@@ -4,7 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Join an Orion accountability group." />
+    <meta name="robots" content="noindex" />
     <title>Join an Orion group</title>
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="icon" href="/icon-192.png" type="image/png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <style>
       * { margin: 0; padding: 0; box-sizing: border-box; -webkit-font-smoothing: antialiased; }
       :root {
@@ -59,12 +63,15 @@
         Invite code:
         <div class="code-pill" id="code-pill"></div>
       </div>
-      <a class="btn" href="https://apps.apple.com/app/orion">Get Orion</a>
+      <a class="btn" href="https://apps.apple.com/app/id6499177019?ct=web-invite">Get Orion</a>
       <p class="hint">After installing, tap the invite link again to join the group.</p>
     </main>
     <script>
-      const params = new URLSearchParams(window.location.search);
-      const code = (params.get("code") || "").replace(/[^A-Za-z0-9_-]/g, "");
+      // Invite links are /orion-app/join/<code>; _redirects serves this page for them without
+      // changing the URL. ?code= is the legacy shape the app still accepts.
+      const pathCode = window.location.pathname.match(/^\/orion-app\/join\/([^/]+)/);
+      const raw = pathCode ? pathCode[1] : new URLSearchParams(window.location.search).get("code");
+      const code = (raw || "").replace(/[^A-Za-z0-9_-]/g, "");
       if (code) {
         document.getElementById("code-pill").textContent = code;
         document.getElementById("code-display").hidden = false;
